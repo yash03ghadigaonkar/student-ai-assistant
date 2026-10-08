@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student AI Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="login-box">
+
+            <h1>Student AI Assistant 🤖</h1>
+
+            <p class="subtitle">
+                Your AI-powered study companion
+            </p>
+
+
+            <!-- LOGIN -->
+            <div id="loginSection">
+
+                <form id="loginForm">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <button type="submit">
+                        Login
+                    </button>
+
+                </form>
+
+                <p id="loginMessage"></p>
+
+                <p class="register-text">
+                    Don't have an account?
+                    <a href="#" id="showRegister">
+                        Create Account
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- REGISTER -->
+            <div id="registerSection" class="hidden">
+
+                <form id="registerForm">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                    <label>Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button type="submit">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p id="registerMessage"></p>
+
+                <p class="register-text">
+                    Already have an account?
+                    <a href="#" id="showLogin">
+                        Login
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- DASHBOARD -->
+            <div id="dashboardSection" class="hidden">
+
+                <div class="dashboard-header">
+
+                    <div>
+                        <h2>Welcome, <span id="studentName">Student</span> 👋</h2>
+
+                        <p>
+                            Ask anything about your studies.
+                        </p>
+                    </div>
+
+                    <button id="logoutButton" class="logout-button">
+                        Logout
+                    </button>
+
+                </div>
+
+
+                <div class="chat-box">
+
+                    <div id="chatMessages" class="chat-messages">
+
+                        <div class="ai-message">
+                            <strong>🤖 AI Assistant</strong>
+
+                            <p>
+                                Hello! I'm your Student AI Assistant.
+                                Ask me any study-related question.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="question-area">
+
+                        <textarea
+                            id="questionInput"
+                            placeholder="Ask your study question..."
+                            rows="3"
+                        ></textarea>
+
+                        <button id="askButton">
+                            Ask AI 🚀
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p id="aiStatus"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
