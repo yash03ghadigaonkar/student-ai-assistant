@@ -322,7 +322,7 @@ askButton.addEventListener("click", async function () {
 
 
         addAIMessage(
-            "Sorry, I couldn't connect to the AI right now. Please try again."
+            "DEBUG ERROR: " + error.message
         );
 
 
